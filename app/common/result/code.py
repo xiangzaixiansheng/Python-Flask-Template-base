@@ -28,6 +28,7 @@ codes = {
     427: "文件上传错误",
 }
 
+
 def get_message(code):
     """根据状态码获取消息"""
     return codes.get(code, "未知错误,请联系管理员")

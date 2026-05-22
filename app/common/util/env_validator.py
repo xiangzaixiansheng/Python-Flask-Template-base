@@ -43,6 +43,6 @@ def print_env_status():
         print("\n  缺少以下必要的环境变量:\n")
         for var_name, description in missing:
             print(f"    - {var_name}: {description}")
-        print(f"\n  请参考 .env.example 配置 .env 文件")
+        print("\n  请参考 .env.example 配置 .env 文件")
         print("=" * 60 + "\n")
         sys.exit(1)
