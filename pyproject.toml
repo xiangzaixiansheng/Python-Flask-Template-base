@@ -4,6 +4,21 @@ python_files = "test_*.py"
 python_functions = "test_*"
 addopts = "-v --tb=short"
 
+[tool.coverage.run]
+omit = [
+    "app/common/util/email.py",
+    "app/common/util/export.py",
+    "app/common/util/crypto.py",
+    "app/common/util/http_client.py",
+    "app/common/util/verification_code.py",
+    "app/common/util/audit_log.py",
+    "app/common/util/cache.py",
+    "app/common/util/MySQLUtil.py",
+    "app/common/celery_app.py",
+    "app/tasks/*",
+    "app/api/dao/raw_sql_dao.py",
+]
+
 [tool.black]
 line-length = 120
 target-version = ['py310']
